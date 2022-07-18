@@ -1,1 +1,1 @@
-# vuetify
+# vuetify_study
