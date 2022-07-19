@@ -2,16 +2,16 @@
     <v-container>
         <div class="home">
             <!-- <v-btn @click="start"></v-btn> -->
-            <v-btn>
+            <v-btn @click="start">
                 Click Me
             </v-btn>
-            
+
             <FdelEditCard :cardInfo="cardInfo"/>
-            <breakpoints />
+            <!-- <breakpoints />
             <DataTable />
             <DateForm />
             <TextFields />
-            <TextFieldsSubmit />
+            <TextFieldsSubmit /> -->
         </div>
     </v-container>
 </template>
@@ -53,15 +53,10 @@ export default {
     methods: {
         start() {
             for (const addr in dbDataBase.addrList) {
-                // if (Object.hasOwnProperty.call(object, key)) {
-                    // const element = object[key];
-                    // console.log('addr');
-                    // console.log(addr.name + ' ' + 'addr.type');
-                    // console.log('object, element, key ------------------------->');
-                    // console.log(object);
-                    // console.log(element);
-                    // console.log(key);
-                // }
+                this.cardInfo.title = addr.type;
+                this.cardInfo.content = addr.detail;
+                // this.cardInfo.index = addr.type;
+                // this.cardInfo.chip.text = addr.type;
             }
         }
     }

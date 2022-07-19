@@ -12,12 +12,30 @@
 	},
 -->
 <template>
-	<p> 아이구 졸려 </p>
+	<v-card>
+		<v-card-title v-if="cardInfo.title">
+			<span v-for="title in cardInfo.title" :key="title">
+				카드타이틀 : {{ cardInfo.title }}
+			</span> 
+		</v-card-title>
+		<v-card-text v-if="cardInfo.content">
+			<span v-for="content in cardInfo.content" :key="content">
+				카트콘텐트 : {{ cardInfo.content }}
+			</span>
+		</v-card-text>
+		<!-- <v-card-subtitle>
+			<p> {{ cardInfo.index }} </p>
+			<p> {{ cardInfo.mainColor }} </p>
+			<p> {{ cardInfo.chip.text }} </p>
+			<p> {{ cardInfo.chip.isColor }} </p>
+		</v-card-subtitle> -->
+	</v-card>
 </template>
+
 
 <script>
 export default {
-
+	props: ['cardInfo'],
 }
 </script>
 
