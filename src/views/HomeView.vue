@@ -5,21 +5,29 @@
             <v-btn>
                 Click Me
             </v-btn>
-            <v-btn>
-                    짜증나
-            </v-btn>
+            
             <FdelEditCard :cardInfo="cardInfo"/>
+            <breakpoints />
+            <DataTable />
+            <DateForm />
+            <TextFields />
+            <TextFieldsSubmit />
         </div>
     </v-container>
 </template>
 
 <script>
 // @ is an alias to /src
-import { FdelEditCard } from '@/assets/importFile.js'
+import { FdelEditCard, Breakpoints, DataTable, DateForm, TextFields, TextFieldsSubmit } from '@/assets/importFile.js'
 export default {
     name: 'HomeView',
     components: {
         FdelEditCard,
+        Breakpoints,
+        DataTable,
+        DateForm,
+        TextFields,
+        TextFieldsSubmit
     },
     data() {
         return {
